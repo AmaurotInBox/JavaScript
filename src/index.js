@@ -1,12 +1,4 @@
-import _ from 'lodash';
+import '@/assets/style/index.scss'
+import '@/module'
 
-function component() {
-  const element = document.createElement("div");
-
-  // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = _.join(["Hello", "webpack"], " ");
-  console.log('zxc');
-  return element;
-}
-
-document.body.appendChild(component());
+console.log('index')
