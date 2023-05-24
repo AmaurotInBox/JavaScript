@@ -1,4 +1,2 @@
-import '@/assets/style/index.scss'
-import '@/module'
-
-console.log('index')
+import "@/assets/style/index.scss";
+import "@/module";
