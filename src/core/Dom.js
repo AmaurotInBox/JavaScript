@@ -35,6 +35,27 @@ class Dom {
     this.$el.append(node);
     return this;
   }
+
+  closest(selector) {
+    return $(this.$el.closest(selector));
+  }
+
+  get coords() {
+    return this.$el.getBoundingClientRect();
+  }
+
+  get data() {
+    return this.$el.dataset;
+  }
+
+  findAll(selector) {
+    return this.$el.querySelectorAll(selector);
+  }
+  css(style = {}) {
+    for (const [property, value] of Object.entries(style)) {
+      this.$el.style[property] = value;
+    }
+  }
 }
 
 $.create = (tagName, classes = "") => {

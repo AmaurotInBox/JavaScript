@@ -4,9 +4,9 @@ const CODES = {
 };
 
 function createRow(index, content) {
-  const resize = index ? '<div class="row-resize"></div>' : 0;
+  const resize = index ? '<div class="row-resize" data-resize="row"></div>' : 0;
   return `
-    <div class="row">
+    <div class="row" data-type="resizable" data-row="${index}">
       <div class="row-info">
         ${index ? index : ""}
         ${resize}
@@ -16,16 +16,16 @@ function createRow(index, content) {
   `;
 }
 
-function createCol(col) {
+function createCol(col, index) {
   return `
-    <div class="column">
+    <div class="column" data-type="resizable" data-col="${index}">
       ${col}
-      <div class="col-resize"></div>
+      <div class="col-resize" data-resize="col"></div>
     </div>`;
 }
 
-function createCell() {
-  return `<div class="cell" contenteditable></div>`;
+function createCell(_, index) {
+  return `<div class="cell" contenteditable data-col="${index}"></div>`;
 }
 
 function createCharFromCharCode(_, num) {

@@ -1,5 +1,6 @@
 import { ExcelComponent } from "@core/ExelComponent";
 import createTable from "@/components/table/table.template";
+import resize from "./resize";
 
 export class Table extends ExcelComponent {
   static className = "excel__table";
@@ -14,6 +15,6 @@ export class Table extends ExcelComponent {
     return createTable(10);
   }
   onMousedown(event) {
-    console.log(event.target);
+    resize(event, this.$root);
   }
 }

@@ -73,8 +73,9 @@
     width: 8px;
     opacity: 0;
     background-color: #3c74ff;
+    z-index: 1000;
     &:hover {
-      opacity: 1;
+      opacity: 1 !important;
       cursor: col-resize;
     }
   }
@@ -87,8 +88,9 @@
     height: 8px;
     background-color: #3c74ff;
     opacity: 0;
+    z-index: 1000;
     &:hover {
-      opacity: 1;
+      opacity: 1 !important;
       cursor: row-resize;
     }
   }
